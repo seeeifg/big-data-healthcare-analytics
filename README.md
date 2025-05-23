@@ -86,7 +86,7 @@ docker-compose up -d
 * USE mimiciii;
 
 Then create the external tables.
-```
+
 **6. Run Hive Queries (Example)**
 
 ```sql
