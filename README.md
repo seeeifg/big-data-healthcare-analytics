@@ -61,18 +61,23 @@ Read the Big Data Healthcare Analytics Project - Documentation file for an in-de
 ## Screenshots
 
 **1. Average Length of Stay per Diagnosis - Hive Query**
+
 ![image](https://github.com/user-attachments/assets/e385ef81-965f-40c4-b417-5c934ba58b89)
 
 **2. Distribution of ICU Readmissions - Hive Query**
+
 ![image](https://github.com/user-attachments/assets/c5b02b05-ee6f-4c69-a864-ddf34cde8476)
 
 **3. Mortality Rates by Demographic Groups (Ethnicity) - Hive Query**
+
 ![image](https://github.com/user-attachments/assets/e5274175-6a8e-4746-8432-a60d620e17be)
 
 **4. Mortality Rates by Gender - Hive Query**
+
 ![image](https://github.com/user-attachments/assets/df0b077c-0552-4c78-8005-1652355cabfa)
 
 **5. Average Age of Patients - Map Reduce Task**
+
 ![image](https://github.com/user-attachments/assets/8a79a939-e468-42ce-8ee6-8c2b64cd2097)
 
 **Author:** seeeifg
