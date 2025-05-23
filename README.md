@@ -28,7 +28,7 @@ This project implements a batch analytics pipeline on the **MIMIC-III Clinical D
 docker-hadoop-spark/
 ├── data/                   # Raw and cleaned MIMIC-III data (excluded from repo)
 ├── scripts/                # Python scripts to clean data and convert to Parquet
-├── mapreduce/              # Mapper and reducer scripts for Map Reduce job
+├── mapreduce/              # Mapper and reducer scripts for MapReduce job
 ├── docker-compose.yml      # Docker environment setup
 ├── Big Data Healthcare Analytics Project - Documentation.pdf
 ├── Project Brief.docx      # The original problem brief
