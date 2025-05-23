@@ -1,1 +1,24 @@
+# Byte-compiled / dependency files
+__pycache__/
+*.py[cod]
+
+# JAR and class files
+*.jar
+*.class
+
+# Logs
+*.log
+
+# Data (exclude raw data from GitHub)
 data/
+*.csv
+*.tsv
+*.parquet
+
+# Excel files
+*.xls
+*.xlsx
+
+# System files
+.DS_Store
+Thumbs.db
