@@ -87,7 +87,6 @@ docker-compose up -d
 
 Then create the external tables.
 ```
-
 **6. Run Hive Queries (Example)**
 
 ```sql
@@ -98,6 +97,7 @@ GROUP BY diagnosis;
 ```
 
 **7. Run MapReduce Job**
+
 ```bash
 hadoop jar /root/avg.jar AverageAge \
   /user/root/clean_csv/PATIENTS_CLEAN \
