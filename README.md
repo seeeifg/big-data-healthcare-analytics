@@ -10,7 +10,7 @@ This project builds a batch analytics pipeline on the **MIMIC-III Clinical Datab
 
 ---
 
-**Project Scope**
+## Project Scope
 
 This project focuses on the batch processing and analytics of ICU patient data from the MIMIC-III Clinical Database using a Dockerized big data stack. It is intended for educational and research purposes to demonstrate the use of Hadoop, Hive, and MapReduce in healthcare analytics.
 
