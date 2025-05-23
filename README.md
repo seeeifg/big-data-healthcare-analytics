@@ -38,26 +38,58 @@ docker-hadoop-spark/
 ---
 
 ## Setup Instructions
+This section explains how to set up the project environment and run the full data pipeline — from cleaning raw CSVs to analyzing them in Hive and Hadoop MapReduce.
 
-**1. Start Hadoop and Hive containers**
-```bash
+**1. Prerequisites**
+* Git Bash (on Windows)
+
+* Python 3.x installed with pip
+
+* Docker + Docker Compose installed
+
+* Git (to clone the repo and push changes)
+
+* MIMIC-III Clinical Database Demo CSVs (placed in data/mimiciii/csv/)
+
+**2. Install Python Dependencies**
+
+pip install pandas pyarrow
+
+**3. Start Hadoop and Hive containers**
+```cd /c/Users/Seif/docker-hadoop-spark
 docker-compose up -d
 ```
+**4. Run the Data Cleaning Scripts**
 
-**2. Create directories and upload cleaned data to HDFS**
-```bash
-hdfs dfs -mkdir -p /user/root/clean_csv
-hdfs dfs -put ./clean_csv/PATIENTS_CLEAN /user/root/clean_csv/
+* python scripts/convert_patients_to_parquet.py
+
+* python scripts/convert_admissions_to_parquet.py
+
+* python scripts/convert_icustays_to_parquet.py
+
+* docker exec -it namenode bash
+
+* hdfs dfs -mkdir -p /user/root/mimiciii/{patients,admissions,icustays}
+
+* hdfs dfs -put /tmp/patients.parquet /user/root/mimiciii/patients/
+
+* hdfs dfs -put /tmp/admissions.parquet /user/root/mimiciii/admissions/
+
+* hdfs dfs -put /tmp/icustays.parquet /user/root/mimiciii/icustays/
+
+**5. Create Hive Database and Tables**
+
+* docker exec -it hive-server bash
+
+* CREATE DATABASE IF NOT EXISTS mimiciii;
+  
+* USE mimiciii;
+
+Then create the external tables.
 ```
 
-**3. Run MapReduce Job**
-```bash
-hadoop jar /root/avg.jar AverageAge \
-  /user/root/clean_csv/PATIENTS_CLEAN \
-  /user/root/output_avg
-```
+**6. Run Hive Queries (Example)**
 
-**4. Run Hive Queries (Example)**
 ```sql
 SELECT diagnosis, AVG(los)
 FROM icustays
@@ -65,6 +97,12 @@ JOIN admissions USING (hadm_id)
 GROUP BY diagnosis;
 ```
 
+**7. Run MapReduce Job**
+```bash
+hadoop jar /root/avg.jar AverageAge \
+  /user/root/clean_csv/PATIENTS_CLEAN \
+  /user/root/output_avg
+```
 ---
 
 ## Key Analytics Conducted
