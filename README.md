@@ -10,7 +10,7 @@ This project implements a batch analytics pipeline on the **MIMIC-III Clinical D
 
 ---
 
-## 🔧 Architecture Overview
+## Architecture Overview
 
 | Component   | Description |
 |------------|-------------|
@@ -22,7 +22,7 @@ This project implements a batch analytics pipeline on the **MIMIC-III Clinical D
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 docker-hadoop-spark/
@@ -37,7 +37,7 @@ docker-hadoop-spark/
 
 ---
 
-## 🛠️ Setup Instructions
+## 🛠Setup Instructions
 
 This guide walks through setting up the environment, cleaning data, uploading it to HDFS, and analyzing it using Hive and MapReduce.
 
@@ -136,7 +136,7 @@ hadoop jar /root/avg.jar AverageAge \
 
 ---
 
-## 🧬 Data Model
+## Data Model
 
 | Table       | Key Fields |
 |-------------|------------|
@@ -152,13 +152,13 @@ hadoop jar /root/avg.jar AverageAge \
 
 ---
 
-## 📄 Documentation
+## Documentation
 
 See **Big Data Healthcare Analytics Project - Documentation.pdf** for the full technical breakdown, data pipeline, architecture, and justification of tools used.
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 **1. Average Length of Stay per Diagnosis (Hive)**  
 ![LOS](https://github.com/user-attachments/assets/e385ef81-965f-40c4-b417-5c934ba58b89)
@@ -177,6 +177,6 @@ See **Big Data Healthcare Analytics Project - Documentation.pdf** for the full t
 
 ---
 
-## 👤 Author
+## Author
 
 **GitHub:** [seeeifg](https://github.com/seeeifg)
