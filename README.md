@@ -24,6 +24,7 @@ docker-compose up -d
 
 **Copy data into HDFS:**
 hdfs dfs -mkdir -p /user/root/clean_csv
+
 hdfs dfs -put ./clean_csv/PATIENTS_CLEAN /user/root/clean_csv/
 
 **Run MapReduce job:**
@@ -35,22 +36,22 @@ hadoop jar /root/avg.jar AverageAge \
 Example: Average ICU length of stay by diagnosis
 
 ## Examples of Key Analytics
-Average patient age (MapReduce)
-ICU readmissions (Hive)
-Mortality rates (Hive)
+* Average patient age (MapReduce)
+* ICU readmissions (Hive)
+* Mortality rates (Hive)
 
 ## Data Model
 
 **Relationships**
-patients.subject_id = admissions.subject_id
-admissions.hadm_id = icustays.hadm_id
-patients.subject_id = icustays.subject_id
+* patients.subject_id = admissions.subject_id
+* admissions.hadm_id = icustays.hadm_id
+* patients.subject_id = icustays.subject_id
 
 **Measures**
-los — ICU length of stay
-hospital_expire_flag — hospital mortality
-expire_flag — overall mortality
-diagnosis — admission diagnosis
+* los — ICU length of stay
+* hospital_expire_flag — hospital mortality
+* expire_flag — overall mortality
+* diagnosis — admission diagnosis
 
 ## Documentation
 Read the Big Data Healthcare Analytics Project - Documentation file for an in-depth breakdown
