@@ -23,11 +23,13 @@ docker-hadoop-spark/
 docker-compose up -d
 
 **Copy data into HDFS:**
+
 hdfs dfs -mkdir -p /user/root/clean_csv
 
 hdfs dfs -put ./clean_csv/PATIENTS_CLEAN /user/root/clean_csv/
 
 **Run MapReduce job:**
+
 hadoop jar /root/avg.jar AverageAge \
   /user/root/clean_csv/PATIENTS_CLEAN \
   /user/root/output_avg
