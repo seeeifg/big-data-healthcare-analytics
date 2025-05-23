@@ -119,4 +119,227 @@ Refer to the file **Big Data Healthcare Analytics Project - Documentation.pdf** 
 
 **GitHub:** [seeeifg](https://github.com/seeeifg)
 
-https://claude.ai/public/artifacts/a1f9b752-62a4-404b-b456-6df606c79f80
+1. System Architecture Diagram
+mermaidgraph TB
+    subgraph "Data Sources"
+        A[MIMIC-III Clinical Database]
+        A1[PATIENTS.csv]
+        A2[ADMISSIONS.csv] 
+        A3[ICUSTAYS.csv]
+        A --> A1
+        A --> A2
+        A --> A3
+    end
+
+    subgraph "Docker Container Environment"
+        subgraph "Hadoop Ecosystem"
+            B[Hadoop HDFS]
+            C[Hadoop MapReduce]
+            D[Hive Metastore]
+            E[Hive Server]
+        end
+        
+        subgraph "Processing Layer"
+            F[Apache Hive]
+            G[HiveQL Queries]
+        end
+    end
+
+    subgraph "Analytics Outputs"
+        H[Length-of-Stay Analysis]
+        I[Readmission Analysis]
+        J[Mortality Rate Analysis]
+        K[Batch Reports]
+    end
+
+    A1 --> B
+    A2 --> B
+    A3 --> B
+    B --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    G --> I
+    G --> J
+    H --> K
+    I --> K
+    J --> K
+
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style F fill:#e8f5e8
+    style H fill:#fff3e0
+    style I fill:#fff3e0
+    style J fill:#fff3e0
+2. Data Flow Architecture
+mermaidflowchart LR
+    subgraph "Ingestion"
+        A[Raw CSV Files]
+        B[Data Validation]
+        C[Format Conversion]
+    end
+    
+    subgraph "Storage"
+        D[HDFS Cluster]
+        E[Parquet Format]
+        F[Distributed Blocks]
+    end
+    
+    subgraph "Processing"
+        G[Hive Tables]
+        H[Schema Definition]
+        I[Query Execution]
+    end
+    
+    subgraph "Analytics"
+        J[LOS Prediction]
+        K[Readmission Risk]
+        L[Mortality Analysis]
+    end
+    
+    subgraph "Output"
+        M[Batch Results]
+        N[Reports]
+        O[Visualizations]
+    end
+
+    A --> B --> C
+    C --> D --> E --> F
+    F --> G --> H --> I
+    I --> J
+    I --> K
+    I --> L
+    J --> M --> N --> O
+    K --> M
+    L --> M
+
+    style A fill:#ffebee
+    style D fill:#e3f2fd
+    style G fill:#e8f5e8
+    style J fill:#fff8e1
+    style K fill:#fff8e1
+    style L fill:#fff8e1
+3. Docker Container Architecture
+mermaidgraph TB
+    subgraph "Docker Host"
+        subgraph "Hadoop Cluster"
+            A[NameNode Container]
+            B[DataNode Container 1]
+            C[DataNode Container 2]
+            D[ResourceManager]
+            E[NodeManager]
+        end
+        
+        subgraph "Hive Services"
+            F[Hive Metastore]
+            G[Hive Server2]
+            H[MySQL Database]
+        end
+        
+        subgraph "Infrastructure"
+            I[Docker Network]
+            J[HDFS Volume]
+            K[Hive Warehouse]
+        end
+    end
+
+    A -.-> I
+    B -.-> I
+    C -.-> I
+    D -.-> I
+    E -.-> I
+    F -.-> I
+    G -.-> I
+
+    A --> J
+    B --> J
+    C --> J
+    F --> K
+    G --> K
+    F --> H
+
+    style A fill:#2196f3,color:#fff
+    style B fill:#4caf50,color:#fff
+    style C fill:#4caf50,color:#fff
+    style F fill:#ff9800,color:#fff
+    style G fill:#ff9800,color:#fff
+4. Data Model Relationships
+mermaiderDiagram
+    PATIENTS {
+        int SUBJECT_ID PK
+        varchar GENDER
+        timestamp DOB
+        timestamp DOD
+        int EXPIRE_FLAG
+    }
+    
+    ADMISSIONS {
+        int SUBJECT_ID FK
+        int HADM_ID PK
+        timestamp ADMITTIME
+        timestamp DISCHTIME
+        varchar ADMISSION_TYPE
+        varchar DISCHARGE_LOCATION
+        varchar ETHNICITY
+        text DIAGNOSIS
+        int HOSPITAL_EXPIRE_FLAG
+    }
+    
+    ICUSTAYS {
+        int SUBJECT_ID FK
+        int HADM_ID FK
+        int ICUSTAY_ID PK
+        varchar FIRST_CAREUNIT
+        timestamp INTIME
+        timestamp OUTTIME
+        numeric LOS
+    }
+
+    PATIENTS ||--o{ ADMISSIONS : "has multiple"
+    ADMISSIONS ||--o{ ICUSTAYS : "includes"
+5. Technology Stack
+mermaidgraph TB
+    subgraph "Infrastructure"
+        A[Docker Compose]
+        B[Linux Containers]
+    end
+    
+    subgraph "Storage"
+        C[Hadoop HDFS]
+        D[Distributed Storage]
+    end
+    
+    subgraph "Processing"
+        F[Apache Hive]
+        G[HiveQL Engine]
+    end
+    
+    subgraph "Data"
+        I[MIMIC-III Dataset]
+        J[Parquet Files]
+    end
+    
+    subgraph "Analytics"
+        L[Batch Processing]
+        M[Healthcare Metrics]
+    end
+
+    A --> C
+    B --> C
+    C --> D
+    D --> F
+    F --> G
+    I --> J
+    J --> F
+    F --> L
+    L --> M
+
+    style A fill:#0277bd,color:#fff
+    style C fill:#388e3c,color:#fff
+    style F fill:#f57c00,color:#fff
+    style I fill:#7b1fa2,color:#fff
+    style L fill:#d32f2f,color:#fff
+
+
+
