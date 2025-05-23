@@ -10,6 +10,24 @@ This project builds a batch analytics pipeline on the **MIMIC-III Clinical Datab
 
 ---
 
+**Project Scope**
+
+This project focuses on the batch processing and analytics of ICU patient data from the MIMIC-III Clinical Database using a Dockerized big data stack. It is intended for educational and research purposes to demonstrate the use of Hadoop, Hive, and MapReduce in healthcare analytics.
+
+**In Scope**
+
+* Environment Setup with Docker: Deploy Hadoop and Hive using Docker containers for reproducibility and isolation.
+
+* Data Ingestion: Convert raw CSV files to Parquet format using Python, then load them into HDFS.
+
+* Structured Querying with Hive: Perform analytical queries such as ICU readmission rates and mortality breakdowns.
+
+* MapReduce Analytics: Implement a custom MapReduce job in Java to calculate the average patient age.
+
+* Visualization: Present key analytics via screenshots and query outputs.
+
+ ---
+
 ## Architecture Overview
 
 | Component     | Description |
