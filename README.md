@@ -2,23 +2,20 @@
 This project implements a big data pipeline for batch analytics on the MIMIC-III Clinical Database. It uses Docker to run a Hadoop + Hive environment, and applies MapReduce for analytical tasks on ICU patient data.
 
 **Architecture**
-Docker: Containerized multi-service setup
-Hadoop + HDFS: Distributed data storage
-Hive: SQL-based querying for batch analytics
-MapReduce: Custom Java program to compute patient age statistics
-MIMIC-III (Demo v1.4): Clinical dataset for ICU patients
+* Docker: Containerized multi-service setup
+* Hadoop + HDFS: Distributed data storage
+* Hive: SQL-based querying for batch analytics
+* MapReduce: Custom Java program to compute patient age statistics
+* MIMIC-III (Demo v1.4): Clinical dataset for ICU patients
 
 **Project Structure**
-graphql
-Copy
-Edit
 docker-hadoop-spark/
-├── data/                   # Raw and cleaned MIMIC-III data (excluded from repo)
-├── scripts/                # Python scripts used to clean and convert to Parquet
-├── docker-compose.yml      # Environment setup
-├── Documentation.pdf       # In-depth breakdown of the project's workflow
-├── Project Brief.docx      # The brief based on which the project was conducted
-├── README.md
+* ├── data/                   # Raw and cleaned MIMIC-III data (excluded from repo)
+* ├── scripts/                # Python scripts used to clean and convert to Parquet
+* ├── docker-compose.yml      # Environment setup
+* ├── Documentation.pdf       # In-depth breakdown of the project's workflow
+* ├── Project Brief.docx      # The brief based on which the project was conducted
+* ├── README.md
 
 ## Setup Instructions
 
