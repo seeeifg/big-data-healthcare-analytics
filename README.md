@@ -22,6 +22,9 @@ This project builds a batch analytics pipeline on the **MIMIC-III Clinical Datab
 
 ---
 
+![image](https://github.com/user-attachments/assets/0aa27e13-5771-48c8-9f89-23dd43448252)
+![image](https://github.com/user-attachments/assets/21f40885-b6bd-444a-9098-bf4001b3acef)
+
 ## Project Directory Structure
 
 ```
