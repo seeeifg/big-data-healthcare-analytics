@@ -29,7 +29,7 @@ docker-hadoop-spark/
 ├── data/                   # Raw and cleaned MIMIC-III data (excluded from repo)
 ├── scripts/                # Python scripts to clean data and convert to Parquet
 ├── docker-compose.yml      # Docker environment setup
-├── Documentation.pdf       # In-depth explanation of pipeline architecture
+├── Big Data Healthcare Analytics Project - Documentation.pdf
 ├── Project Brief.docx      # The original problem brief
 └── README.md
 ```
@@ -92,7 +92,7 @@ GROUP BY diagnosis;
 
 ## Documentation
 
-For full architectural and implementation details, refer to the [**Documentation.pdf**](./Documentation.pdf) in this repository.
+Refer to the file **Big Data Healthcare Analytics Project - Documentation.pdf** in this repository for a complete breakdown of the pipeline architecture, data flow, and technical decisions.
 
 ---
 
