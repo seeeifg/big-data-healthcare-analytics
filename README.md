@@ -38,6 +38,7 @@ This project focuses on the batch processing and analytics of ICU patient data f
 | **MapReduce** | Java-based batch analytics engine |
 | **MIMIC-III** | Public ICU dataset for healthcare analytics |
 
+
 ![healthcare_arch](https://github.com/user-attachments/assets/65e5774a-642d-47cb-9885-ff121379717d)
 
 ---
