@@ -39,7 +39,7 @@ This project focuses on the batch processing and analytics of ICU patient data f
 | **MIMIC-III** | Public ICU dataset for healthcare analytics |
 
 
-![healthcare_architecture (2)](https://github.com/user-attachments/assets/be8adddb-663d-4d15-9a35-7c8839c658d9)
+![healthcare_architecture (2)s](https://github.com/user-attachments/assets/107f7c26-99e4-4130-aae1-6d4cb59dd498)
 
 ---
 
