@@ -180,7 +180,8 @@ Refer to [Big Data Healthcare Analytics Project - Documentation.pdf](https://git
 
 ## Screenshots
 
-<p align="center"> <strong>1. Average Length of Stay per Diagnosis (Hive)</strong><br> <img src="https://github.com/user-attachments/assets/e385ef81-965f-40c4-b417-5c934ba58b89" alt="LOS" width="600"/> </p> <p align="center"> <strong>2. ICU Readmission Distribution (Hive)</strong><br> <img src="https://github.com/user-attachments/assets/c5b02b05-ee6f-4c69-a864-ddf34cde8476" alt="Readmissions" width="600"/> </p> <p align="center"> <strong>3. Mortality by Ethnicity (Hive)</strong><br> <img src="https://github.com/user-attachments/assets/e5274175-6a8e-4746-8432-a60d620e17be" alt="Ethnicity Mortality" width="600"/> </p> <p align="center"> <strong>4. Average Patient Age (MapReduce)</strong><br> <img src="https://github.com/user-attachments/assets/8a79a939-e468-42ce-8ee6-8c2b64cd2097" alt="Average Age" width="600"/> </p>
+<p align="center"> <strong>1. Average Length of Stay per Diagnosis (Hive)</strong><br> <img src="https://github.com/user-attachments/assets/e385ef81-965f-40c4-b417-5c934ba58b89" alt="LOS" width="600"/> </p> <p align="center"> <strong>2. ICU Readmission Distribution (Hive)</strong><br> <img src="https://github.com/user-attachments/assets/c5b02b05-ee6f-4c69-a864-ddf34cde8476" alt="Readmissions" width="600"/> </p> <p align="center"> <strong>3. Mortality by Ethnicity (Hive)</strong><br> <img src="https://github.com/user-attachments/assets/69977a5f-3367-42c9-a109-b97de121f21f" alt="Ethnicity Mortality" width="600"/> </p> <p align="center"> <strong>4. Average Patient Age (MapReduce)</strong><br> <img src="https://github.com/user-attachments/assets/8a79a939-e468-42ce-8ee6-8c2b64cd2097" alt="Average Age" width="600"/> </p>
+
 
 ---
 
