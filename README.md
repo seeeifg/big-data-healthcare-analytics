@@ -174,7 +174,7 @@ hadoop jar /root/avg.jar AverageAge \
 
 ## Documentation
 
-For detailed technical architecture, schema design, and analysis overview, please refer to the file [Big Data Healthcare Analytics Project - Documentation.pdf](https://github.com/seeeifg/mimiciii-big-data-healthcare-analytics/blob/master/Big%20Data%20Healthcare%20Analytics%20Project%20-%20Documentation.pdf).
+Please refer to [Big Data Healthcare Analytics Project - Documentation.pdf](https://github.com/seeeifg/mimiciii-big-data-healthcare-analytics/blob/master/Big%20Data%20Healthcare%20Analytics%20Project%20-%20Documentation.pdf) for detailed technical architecture, schema design, and analysis overview.
 
 ---
 
