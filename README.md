@@ -188,7 +188,7 @@ Refer to [Big Data Healthcare Analytics Project - Documentation.pdf](https://git
 
 **Source Environment:** https://github.com/Marcel-Jan/docker-hadoop-spark
 
-**MIMIC-III Dataset:** https://physionet.org/content/mimiciii-demo/1.4/
+**MIMIC-III Dataset:** https://physionet.org/content/mimiciii-demo/1.4
 
 --- 
 
