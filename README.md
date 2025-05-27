@@ -6,7 +6,7 @@
 [![Compute](https://img.shields.io/badge/Compute-MapReduce-E44D26?style=flat-square)](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/)
 [![Dataset](https://img.shields.io/badge/Dataset-MIMIC--III-999999?style=flat-square)](https://physionet.org/content/mimiciii-demo/1.4/)
 
-This project builds a batch analytics pipeline on the **MIMIC-III Clinical Database (Demo v1.4)** using a Docker-based big data environment. It supports structured querying via Hive and parallel analytics using MapReduce.
+This project builds a batch analytics pipeline on the **[MIMIC-III Clinical Database (Demo v1.4)](https://physionet.org/content/mimiciii-demo/1.4/)** using a Docker-based big data environment. It supports structured querying via Hive and parallel analytics using MapReduce.
 
 ---
 
@@ -188,7 +188,7 @@ Refer to the file **[Big Data Healthcare Analytics Project - Documentation.pdf](
 
 **Source Environment:** https://github.com/Marcel-Jan/docker-hadoop-spark
 
-**MIMIC-III Dataset:** https://mimic.physionet.org/
+**MIMIC-III Dataset:** https://physionet.org/content/mimiciii-demo/1.4/
 
 --- 
 
