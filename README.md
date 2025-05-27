@@ -90,7 +90,7 @@ python scripts/convert_icustays_to_parquet.py
 
 docker exec -it namenode bash
 
-hdfs dfs -mkdir -p /user/root/mimiciii/{patients,admissions,icustays}
+hdfs dfs -mkdir -p /user/root/mimiciii/{patients, admissions, icustays}
 hdfs dfs -put /tmp/patients.parquet /user/root/mimiciii/patients/
 hdfs dfs -put /tmp/admissions.parquet /user/root/mimiciii/admissions/
 hdfs dfs -put /tmp/icustays.parquet /user/root/mimiciii/icustays/
